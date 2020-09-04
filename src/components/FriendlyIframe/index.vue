@@ -87,7 +87,7 @@ export default {
         "style",
         "visibility: hidden; position: absolute; top: -99999px; border: none;"
       );
-      if (this.src) this.iframeEl.setAttribute("iframe-src", this.src);
+      if (this.src) this.iframeEl.setAttribute("src", this.src);
       if (this.className) this.iframeEl.setAttribute("class", this.className);
       if (this.class) this.iframeEl.setAttribute("class", this.class);
       if (this.crossorigin)
