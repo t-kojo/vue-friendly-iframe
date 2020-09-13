@@ -95,6 +95,7 @@ export default {
       if (this.target) this.iframeEl.setAttribute("target", this.target);
       if (this.allow) this.iframeEl.setAttribute("allow", this.allow);
       if (this.name) this.iframeEl.setAttribute("name", this.name);
+      if (this.scrolling) this.iframeEl.setAttribute("scrolling", this.scrolling);
 
       this.$el.appendChild(this.iframeEl);
 

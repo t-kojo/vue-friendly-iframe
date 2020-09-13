@@ -55,8 +55,8 @@
           /******/ configurable: false,
           /******/ enumerable: true,
           /******/ get: getter,
-          /******/
-        });
+      /******/
+    });
         /******/
       }
       /******/
@@ -66,11 +66,11 @@
       /******/ var getter =
         module && module.__esModule
           ? /******/ function getDefault() {
-              return module["default"];
-            }
+            return module["default"];
+          }
           : /******/ function getModuleExports() {
-              return module;
-            };
+            return module;
+          };
       /******/ __webpack_require__.d(getter, "a", getter);
       /******/ return getter;
       /******/
@@ -86,7 +86,7 @@
     /******/
   })(
     /************************************************************************/
-    /******/ [
+    /******/[
       /* 0 */
       /***/ function (module, exports, __webpack_require__) {
         "use strict";
@@ -278,12 +278,12 @@
                 .open()
                 .write(
                   "\n          <body onload=\"window.location.replace('" +
-                    this.src +
-                    "'); parent.postMessage('" +
-                    this.iframeLoadedMessage +
-                    "', '*')\"></body>\n          <script>\n            window.document.onreadystatechange = function () {\n              if (window.document.readyState === 'complete') {\n                parent.postMessage('" +
-                    this.iframeOnReadyStateChangeMessage +
-                    "', '*')\n              }\n            };\n          </script>\n          "
+                  this.src +
+                  "'); parent.postMessage('" +
+                  this.iframeLoadedMessage +
+                  "', '*')\"></body>\n          <script>\n            window.document.onreadystatechange = function () {\n              if (window.document.readyState === 'complete') {\n                parent.postMessage('" +
+                  this.iframeOnReadyStateChangeMessage +
+                  "', '*')\n              }\n            };\n          </script>\n          "
                 );
 
               iframeDoc.close();
@@ -309,7 +309,7 @@
                 this.iframeEl.setAttribute("target", this.target);
               if (this.allow) this.iframeEl.setAttribute("allow", this.allow);
               if (this.name) this.iframeEl.setAttribute("name", this.name);
-              this.iframeEl.setAttribute("scrolling", "no");
+              if (this.scrolling) this.iframeEl.setAttribute("scrolling", this.scrolling);
 
               this.$el.appendChild(this.iframeEl);
 
